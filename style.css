@@ -1,0 +1,362 @@
+:root {
+    --lm-bg: #f6f8ff;
+    --lm-bg-content: #fefefe;
+    --lm-text: #4b6a9b;
+    --lm-text-alt: #2b3442;
+    --lm-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+    --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+    --lm-icon-bg: brightness(100%);
+    
+    --lm-bg-dark: #141D2F;
+    --lm-bg-content-dark: #1E2A47;
+    --lm-text-dark: white;
+    --lm-text-alt-dark: white;
+    --lm-shadow-xl-dark: rgba(70,88,109,0.15);
+    --lm-icon-bg-dark: brightness(1000%);
+
+    /* Btn */
+    --btn: #0079ff;
+    --btn-hover: #60abff;
+}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+}
+
+body {
+    background-color: var(--lm-bg);
+    font-size: 13px;
+    color: var(--lm-text);
+    overflow-x: hidden;
+}
+.body.dark{
+    background-color:var(--lm-bg-dark);
+    font-size: 13px;
+    color: var(--lm-text-dark);
+}
+.wrapper{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 730px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.modebtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90px;
+    letter-spacing: 2.5px;
+    color: var(--lm-text);
+    font-weight: bold;
+    cursor: pointer;
+}
+.modebtn.dark{
+    color: var(--lm-text-dark);
+}
+.form{
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+.form{
+    position: relative;
+    background-color: var(--lm-bg-content);
+    border-radius: 15px;
+    box-shadow: var(--lm-shadow);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(./assets/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position-x: 24px;
+    background-position-y: center;
+    background-size: 20px;
+    /* display: none; */
+}
+.form.dark{
+    background-color: var(--lm-bg-content-dark);
+    
+}
+.inputForm{
+    appearance: none;
+    border: none;
+    padding-left: 50px;
+    outline: none;
+    width: 70%;
+    color: var(--lm-text);
+    background-color: transparent;
+}
+.inputForm.dark{
+    color: var(--lm-text-dark);
+}
+.inputForm::placeholder{
+    color: var(--lm-text);
+    letter-spacing: -0.5px;
+    font-size: 13px;
+}
+.inputForm.dark::placeholder{
+    color: var(--lm-text-dark);
+}
+
+#error{
+    color: red;
+    font-weight: bold;
+    
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+.userInfo{
+    display: flex;
+    background-color: var(--lm-bg-content);
+    border-radius: 15px;
+    box-shadow: var(--lm-shadow);
+    padding: 40px;
+    gap: 40px;
+    position: relative;
+}
+
+.userInfo.dark{
+    background-color: var(--lm-bg-content-dark);
+}
+.actualData{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.userInfo img[data-user-image]{
+    width: 117px;
+    height: 117px;
+    border-radius: 100%;
+    margin-left: 40px;
+}
+.nameAndDate{
+    display: flex;
+    justify-content: space-between;
+}
+.name a[data-link]{
+    font-size: 16px;
+    color: var(--btn);
+}
+.joined-date{
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+.bio{
+    line-height: 25px;
+    opacity: 0.75;
+    font-size: 15px;
+}
+.profilestats{
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--lm-bg);
+    
+    border-radius: 10px;
+    padding: 18px 32px; 
+    margin: 20px 0;
+}
+.profilestats.dark{
+    background-color: var(--lm-bg-dark);
+}
+.repos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+.repos p{
+    text-align: center;
+}
+.followers p{
+    text-align: center;
+}
+.following p{
+    text-align: center;
+}
+.repos p:first-of-type{
+    font-size: 13px;
+}
+.repoCount{
+    font-size: 22px;
+}
+.following{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+.following p:first-of-type{
+    font-size: 13px;
+}
+.followingCount{
+    font-size: 22px;
+}
+.followers{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+
+.followers p:first-of-type{
+    font-size: 13px;
+}
+.followersCount{
+    font-size: 22px;
+}
+.icons{
+    opacity: 0.75;
+    color: var(--lm-text);
+    filter: var(--lm-icon-bg);
+
+}
+.icons.dark{
+    color: var(--lm-text-dark);
+    filter: var(--lm-icon-bg-dark);
+
+}
+.bottomwrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vw; 
+} 
+.bottomwrapper div p,a,img{
+    color: var(--lm-text);
+    font-weight: bold;
+}
+.bottomwrapper.dark div.dark p.dark,a.dark,img.dark{
+    color: var(--lm-text-dark);
+}
+.location, .siteLink,.twitter,.company{
+    display: flex;
+    gap: 1vw;
+    
+} 
+
+.btn{
+    appearance: none;
+    outline: none;
+    border: none;
+    min-width: 84px;
+    padding: 14px 28px;
+    background-color: var(--btn);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    
+
+}
+.btn:hover{
+    background-color: var(--btn-hover);
+}
+
+@media (max-width:1000px) {
+    .container{
+        width: 80%;
+    }
+    .actualData{
+        width: 100%;
+    }
+    #error{
+        position: absolute;
+        right: 0;
+        top: -40%;
+        
+    }
+    .userInfo img[data-user-image]{
+        left: 0;
+        position: absolute;
+    }
+    .nameAndDate{
+        flex-direction: column;
+        margin-left: 150px;
+    }
+    .bio{
+        margin-top: 2vh;
+    }
+    
+}
+@media (max-width:700px) {
+    .btn{
+        min-width: 64px;
+    padding: 10px 14px;
+    }
+    .bottomwrapper{
+        display: grid;
+        grid-template-columns:1fr;
+        gap: 1.5vw;
+
+    }
+}
+@media (max-width:700px) {
+    .userInfo img[data-user-image]{
+        
+        width: 70px;
+        height: 70px;
+    }
+    .nameAndDate{
+        margin-left: 95px;
+    }
+    .profilestats{
+        padding: 18px 18px ;
+    }
+}
+@media (max-width:500px) {
+    .container{
+        width: 327px;
+    }
+    .btn{
+        max-width: 74px;
+        padding: 5px 10px;
+    }
+    .name h1{
+        font-size: 16px
+    }
+    .userInfo{
+        padding: 24px;
+    }
+    .userInfo img[data-user-image]{
+        margin-left: 20px;
+    }
+    .nameAndDate{
+        margin-left: 75px;
+    }
+    .joined-date{
+        font-size: 15px;
+    }
+    .profilestats{
+        margin: 0;
+    }
+    .form{
+        background-position-x: 5px ;
+    }
+    .inputForm{
+        padding-left: 25px;
+    }
+}

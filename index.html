@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Detective</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+    <div class="wrapper">
+        <div class="container">
+            <div class="header">
+                <h1>DevDetective</h1>
+                <div class="modebtn">
+                    <p class="mode"></p>
+                    <img  alt="" class="modeImage">
+                </div>
+            </div>
+            <div class="user">
+                <div class="searchBar">
+                    <form class="form">
+                        <input type="search" name="userName" id="" class="inputForm" placeholder="Enter a GitHub username...">
+                        <p id="error"></p>
+                        <button class="btn" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="userInfo">
+                    <img data-user-image>
+                    <div class="actualData">
+                        <div class="nameAndDate">
+                            <div class="name">
+                                <h1 data-name></h1>
+                                <a data-link></a>
+                            </div>
+                            <div class="date">
+                                <p class="joined-date"> </p>
+                            </div>
+                        </div>
+                        <div class="bio"></div>
+                        <div class="profilestats">
+                            <div class="repos">
+                                <p>Repos</p>
+                                <p class="repoCount"></p>
+                            </div>
+                            <div class="followers">
+                                <p>followers</p>
+                                <p class="followersCount"></p>
+                            </div>
+                            <div class="following">
+                                <p>following</p>
+                                <p class="followingCount"></p>
+                            </div>
+                        </div>
+                        <div class="bottomwrapper">
+                            <div class="location">
+                                <img src="./assets/location-icon.svg"class="icons"  alt="">
+                                <p class="address"></p>
+                            </div>
+                            <div class="siteLink">
+                                <img src="./assets/website-icon.svg" class="icons" alt="">
+                                <a class="websiteLink"></a>
+                            </div>
+                            <div class="twitter">
+                                <img src="./assets/twitter-icon.svg" class="icons" alt="">
+                                <a class="twitterLink"></a>
+                            </div>
+                            <div class="company">
+                                <img src="./assets/company-icon.svg"class="icons"  alt="">
+                                <p class="companyName"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
